@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Justin</title>
+  <link rel="stylesheet" href="./justin/style.css">
+  <link rel="shortcut icon" href="./justin/Nurse.jpg" type="image/x-icon">
+</head>
+<!-- https://aihumans.ai/aihumans/justin.html -->
+
+<body>
+  <div id="content">
+    <div id="video-wrapper">
+      <div>
+        <video id="talk-video" src="./justin/or_idle.mp4" width="400" height="400" autoplay loop></video>
+      </div>
+    </div>
+    <input type="text" placeholder="Enter question" id="questionByUse">
+    <div id="buttons">
+      <button id="connect-button" type="button">Connect</button>
+      <button id="talk-button" type="button">Speak text</button>
+      <button id="destroy-button" type="button">Stop connection</button>
+    </div>
+
+    <div id="status">
+      ICE gathering status: <label id="ice-gathering-status-label">___</label><br />
+      ICE status: <label id="ice-status-label">___</label><br />
+      Peer connection status: <label id="peer-status-label">___</label><br />
+      Signaling status: <label id="signaling-status-label">___</label><br />
+      Streaming status: <label id="streaming-status-label">___</label><br />
+    </div>
+    <div class="note">
+      <b>Note:</b>
+      <ol>
+        <li>Will not work on direct opening, will have to open in vs code, then install live server extension and right
+          click on html page to "Open with live server"</li>
+        <li>Image has to be stored on a servers with accessible url,</li>
+        <li>If we will use it like we use it with our other pages, it will expose our Secret D-ID key,</li>
+        <li>We have to use either server api to get it or a SPA (react app)</li>
+      </ol>
+    </div>
+
+  </div>
+  <div id="spinner"><span class="loader"></span></div>
+  <script type="module" src="./justin/dIDClientApiCall.js"></script>
+</body>
+
+</html>
